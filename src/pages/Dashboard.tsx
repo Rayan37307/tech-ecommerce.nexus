@@ -89,7 +89,7 @@ export default function Dashboard({
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 font-sans">
       
-      <div className="space-y-2 mb-10 pb-4 border-b border-border">
+      <div className="space-y-2 mb-10 pb-4 border-b border-slate-200 dark:border-slate-900">
         <span className="text-[10px] font-mono tracking-widest text-[#22d3ee] font-bold">
           SECURE CLIENT SECTOR
         </span>
@@ -103,7 +103,7 @@ export default function Dashboard({
         {/* Left Side: Navigation Links Column */}
         <nav
           className={`lg:col-span-3 rounded-2xl border p-4 space-y-1.5 flex-shrink-0 ${
-            darkMode ? 'bg-text' : 'bg-surface'
+            darkMode ? 'bg-slate-950 border-slate-900 text-slate-300' : 'bg-slate-50 border-slate-200'
           }`}
         >
           {/* Headline Name */}
@@ -112,7 +112,7 @@ export default function Dashboard({
               {userProfile.name.slice(0, 2)}
             </div>
             <div className="text-xs truncate">
-              <h4 className="font-bold text-text-primary truncate">{userProfile.name}</h4>
+              <h4 className="font-bold text-slate-900 dark:text-white truncate">{userProfile.name}</h4>
               <span className="text-slate-455 font-mono text-[9px] uppercase tracking-wide truncate">{userProfile.email}</span>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function Dashboard({
                     ? darkMode
                       ? 'bg-slate-900 text-cyan-405 border border-slate-800 font-bold'
                       : 'bg-blue-50 text-blue-600 font-bold'
-                    : 'text-text-secondary hover:bg-slate-100 dark:hover:bg-slate-900'
+                    : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -146,7 +146,7 @@ export default function Dashboard({
                   <span>{tab.label}</span>
                 </div>
                 {tab.count !== undefined && tab.count > 0 && (
-                  <span className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-primary/10 text-blue-500 font-bold dark:bg-cyan-550/10 dark:text-cyan-400">
+                  <span className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-blue-600/10 text-blue-500 font-bold dark:bg-cyan-550/10 dark:text-cyan-400">
                     {tab.count}
                   </span>
                 )}
@@ -182,7 +182,7 @@ export default function Dashboard({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <User className="w-5 h-5 text-cyan-400" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Profile Settings</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Profile Settings</h2>
               </div>
 
               <form onSubmit={handleProfileSubmit} className="space-y-4 font-sans text-xs">
@@ -244,12 +244,12 @@ export default function Dashboard({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <ShoppingBag className="w-5 h-5 text-cyan-400" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Purchase History Logs</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Purchase History Logs</h2>
               </div>
 
               {orders.length === 0 ? (
                 <div className="text-center py-12 space-y-3 font-sans">
-                  <p className="text-text-secondary font-sans text-xs">
+                  <p className="text-slate-500 dark:text-slate-400 font-sans text-xs">
                     No active hardware deployments have been verified under your client ID.
                   </p>
                   <button
@@ -264,23 +264,23 @@ export default function Dashboard({
                   {orders.map((order) => (
                     <div
                       key={order.id}
-                      className="border rounded-2xl overflow-hidden border-border text-left"
+                      className="border rounded-2xl overflow-hidden border-slate-200 dark:border-slate-900 text-left"
                     >
                       {/* top bar summaries info */}
                       <div className="flex flex-col sm:flex-row justify-between p-4 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-850 text-xs font-mono relative gap-2">
                         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                           <div>
                             <span className="text-[9px] uppercase text-slate-500 font-bold">Transaction ID</span>
-                            <p className="font-semibold text-text-primary">{order.id}</p>
+                            <p className="font-semibold text-slate-900 dark:text-white">{order.id}</p>
                           </div>
                           <div>
                             <span className="text-[9px] uppercase text-slate-500 font-bold">Date</span>
-                            <p className="font-semibold text-text-primary">{order.date}</p>
+                            <p className="font-semibold text-slate-900 dark:text-white">{order.date}</p>
                           </div>
                         </div>
 
                         <div className="flex items-center gap-3.5 sm:self-center">
-                          <span className="text-xs font-bold text-text-primary">Charged: ${order.total}</span>
+                          <span className="text-xs font-bold text-slate-900 dark:text-white">Charged: ${order.total}</span>
                           <span className="px-2.5 py-0.5 rounded-full font-bold uppercase text-[9px] bg-sky-500/10 text-sky-400 border border-sky-500/15">
                             {order.status}
                           </span>
@@ -316,7 +316,7 @@ export default function Dashboard({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 bg-white shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <Heart className="w-5 h-5 text-rose-500" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Active Wishlisted Cards</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Active Wishlisted Cards</h2>
               </div>
 
               {wishlist.length === 0 ? (
@@ -374,7 +374,7 @@ export default function Dashboard({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <MapPin className="w-5 h-5 text-cyan-405" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Transit Logistics Address</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Transit Logistics Address</h2>
               </div>
 
               {/* Address additions Form */}
@@ -498,14 +498,14 @@ export default function Dashboard({
                     {userProfile.addresses.map((addr) => (
                       <div
                         key={addr.zip}
-                        className="p-4 rounded-xl border border-border text-left relative text-xs flex justify-between gap-4 items-start"
+                        className="p-4 rounded-xl border border-slate-200 dark:border-slate-900 text-left relative text-xs flex justify-between gap-4 items-start"
                       >
                         <div className="space-y-1.5">
                           <h5 className="font-bold flex items-center gap-1.5">
                             <MapPin className="w-3.5 h-3.5 text-cyan-400" />
                             <span>{addr.name} ({addr.zip})</span>
                           </h5>
-                          <p className="text-text-secondary leading-relaxed font-sans text-[11px]">
+                          <p className="text-slate-500 dark:text-slate-400 leading-relaxed font-sans text-[11px]">
                             Primary Node: {addr.street}, {addr.city}, {addr.state} <br />
                             Phone: {addr.phone} • Email: {addr.email}
                           </p>
@@ -556,7 +556,7 @@ export default function Dashboard({
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl border border-dashed border-border flex flex-col items-center justify-center p-6 text-center space-y-3">
+                <div className="p-4 rounded-xl border border-dashed border-slate-200 dark:border-slate-900 flex flex-col items-center justify-center p-6 text-center space-y-3">
                   <Lock className="w-8 h-8 text-cyan-400" />
                   <p className="text-xs text-slate-500 dark:text-slate-455 font-sans leading-relaxed max-w-xs">
                     Your secure keys are masked by central payment decryptions. Multi-device cards can be synchronized securely at billing panels during checkout.

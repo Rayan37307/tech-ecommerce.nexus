@@ -31,13 +31,13 @@ export default function FAQ({ darkMode }: FAQProps) {
         <h1 className="font-display font-bold text-3xl md:text-4xl text-slate-905 dark:text-white leading-tight">
           Frequently Answered Parameters
         </h1>
-        <p className="text-sm text-text-secondary font-sans">
+        <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">
           Toggle specific category matrices to configure logistics, returns or hardware warranty provisions.
         </p>
       </div>
 
       {/* Tab select groupers */}
-      <div className="flex flex-wrap gap-2 justify-center pb-2 border-b border-border">
+      <div className="flex flex-wrap gap-2 justify-center pb-2 border-b border-slate-200 dark:border-slate-900">
         {groups.map((g) => (
           <button
             key={g}
@@ -93,7 +93,7 @@ export default function FAQ({ darkMode }: FAQProps) {
 
                 {/* dynamic expandable description field */}
                 {isExp && (
-                  <p className="text-xs text-text-secondary mt-3 pl-0 md:pl-24 leading-relaxed font-sans max-w-3xl border-t border-slate-100 dark:border-slate-900 pt-3">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 pl-0 md:pl-24 leading-relaxed font-sans max-w-3xl border-t border-slate-100 dark:border-slate-900 pt-3">
                     {faq.a}
                   </p>
                 )}

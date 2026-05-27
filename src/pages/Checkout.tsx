@@ -135,7 +135,7 @@ export default function Checkout({
             <span
               className={`w-8 h-8 rounded-full flex items-center justify-center border font-bold ${
                 activeStep >= 1
-                  ? 'bg-primary border-blue-600 text-white shadow-md'
+                  ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                   : 'bg-slate-100 border-slate-200 text-slate-400 dark:bg-slate-900'
               }`}
             >
@@ -149,7 +149,7 @@ export default function Checkout({
             <span
               className={`w-8 h-8 rounded-full flex items-center justify-center border font-bold ${
                 activeStep >= 2
-                  ? 'bg-primary border-blue-600 text-white shadow-md'
+                  ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                   : 'bg-slate-100 border-slate-200 text-slate-450 dark:bg-slate-900 dark:border-slate-800'
               }`}
             >
@@ -163,7 +163,7 @@ export default function Checkout({
             <span
               className={`w-8 h-8 rounded-full flex items-center justify-center border font-bold ${
                 activeStep >= 3
-                  ? 'bg-primary border-blue-600 text-white shadow-md'
+                  ? 'bg-blue-600 border-blue-600 text-white shadow-md'
                   : 'bg-slate-100 border-slate-200 text-slate-450 dark:bg-slate-900 dark:border-slate-800'
               }`}
             >
@@ -184,7 +184,7 @@ export default function Checkout({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <Truck className="w-5 h-5 text-cyan-400" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Shipping Telemetry Coordinates</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Shipping Telemetry Coordinates</h2>
               </div>
 
               <form onSubmit={handleStep1Next} className="space-y-4 font-sans text-xs">
@@ -332,7 +332,7 @@ export default function Checkout({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <Truck className="w-5 h-5 text-[#22d3ee]-400" />
-                <h2 className="font-display font-bold text-lg text-text-primary font-display">Select Dispatch Freight Velocity</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white font-display">Select Dispatch Freight Velocity</h2>
               </div>
 
               <div className="space-y-4 font-sans text-xs">
@@ -401,7 +401,7 @@ export default function Checkout({
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-xs'}`}>
               <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
                 <CreditCard className="w-5 h-5 text-emerald-400" />
-                <h2 className="font-display font-bold text-lg text-text-primary">Secure Encrypted Payment Console</h2>
+                <h2 className="font-display font-bold text-lg text-slate-900 dark:text-white">Secure Encrypted Payment Console</h2>
               </div>
 
               <form onSubmit={handleStep3Submit} className="space-y-4 font-sans text-xs">
@@ -514,11 +514,11 @@ export default function Checkout({
         <aside className="lg:col-span-4 space-y-6">
           <div
             className={`border rounded-2xl p-5 space-y-5 ${
-              darkMode ? 'bg-text' : 'bg-surface'
+              darkMode ? 'bg-slate-950 border-slate-900 text-slate-300' : 'bg-slate-50 border-slate-200 shadow-xs'
             }`}
           >
             <div className="flex items-center justify-between gap-2 border-b border-slate-250 dark:border-slate-900 pb-3">
-              <h3 className="font-display font-bold text-sm text-text-primary">Active Order Overview</h3>
+              <h3 className="font-display font-bold text-sm text-slate-900 dark:text-white">Active Order Overview</h3>
               <button
                 onClick={() => setView('cart')}
                 className="text-[10px] uppercase font-mono tracking-wider text-blue-500 dark:text-cyan-400 hover:underline cursor-pointer"
@@ -536,7 +536,7 @@ export default function Checkout({
                       <img src={item.product.images[0]} alt={item.product.name} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                     </div>
                     <div className="text-xs">
-                      <h5 className="font-semibold text-text-primary line-clamp-1">{item.product.name}</h5>
+                      <h5 className="font-semibold text-slate-900 dark:text-white line-clamp-1">{item.product.name}</h5>
                       <span className="text-[9px] font-mono text-slate-500">Qty: {item.quantity}</span>
                     </div>
                   </div>
@@ -549,10 +549,10 @@ export default function Checkout({
             </div>
 
             {/* Subtotal break downs */}
-            <div className="space-y-3.5 text-xs text-text-secondary border-t border-slate-200/60 dark:border-slate-900 pt-4 font-sans">
+            <div className="space-y-3.5 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-900 pt-4 font-sans">
               <div className="flex justify-between">
                 <span>Modules Subtotal:</span>
-                <span className="font-semibold text-text-primary font-mono">${subtotal}</span>
+                <span className="font-semibold text-slate-900 dark:text-white font-mono">${subtotal}</span>
               </div>
 
               {appliedCoupon && (
@@ -564,7 +564,7 @@ export default function Checkout({
 
               <div className="flex justify-between">
                 <span>Shipping ({selectedShipping.name}):</span>
-                <span className="font-semibold text-text-primary font-mono">
+                <span className="font-semibold text-slate-900 dark:text-white font-mono">
                   {shippingCost === 0 ? 'FREE' : `$${shippingCost}`}
                 </span>
               </div>

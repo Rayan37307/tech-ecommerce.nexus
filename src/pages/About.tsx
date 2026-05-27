@@ -25,7 +25,7 @@ export default function About({ darkMode }: AboutProps) {
         <h1 className="font-display font-bold text-4xl md:text-5xl text-slate-905 dark:text-white leading-tight">
           Engineering the Future of Workspace Setup
         </h1>
-        <p className="text-text-secondary text-sm md:text-base leading-relaxed font-sans">
+        <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base leading-relaxed font-sans">
           Forging premium hardware components for software designers, elite developers, and visual directors. Our philosophy marries brutalist aerospace durability with clean layouts and responsive, glowing signals.
         </p>
       </section>
@@ -33,7 +33,7 @@ export default function About({ darkMode }: AboutProps) {
       {/* Core Values grid */}
       <section className="space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="font-display font-bold text-2xl text-text-primary">Our Core Pillars</h2>
+          <h2 className="font-display font-bold text-2xl text-slate-900 dark:text-white">Our Core Pillars</h2>
           <p className="text-xs text-slate-500 dark:text-slate-405 font-mono uppercase tracking-wide">WHAT WE STAND GUARD OVER</p>
         </div>
 
@@ -44,12 +44,12 @@ export default function About({ darkMode }: AboutProps) {
               <div
                 key={v.title}
                 className={`p-5 rounded-2xl border text-left ${
-                  darkMode ? 'bg-text' : 'bg-surface'
+                  darkMode ? 'bg-slate-950/45 border-slate-900 text-slate-100' : 'bg-slate-50 border-slate-200'
                 }`}
               >
                 <ValIcon className={`w-8 h-8 ${v.color} mb-3.5`} />
                 <h4 className="font-display font-semibold text-sm mb-2 text-slate-950 dark:text-slate-205">{v.title}</h4>
-                <p className="text-xs text-text-secondary leading-relaxed font-sans">{v.text}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-sans">{v.text}</p>
               </div>
             );
           })}
@@ -59,7 +59,7 @@ export default function About({ darkMode }: AboutProps) {
       {/* Milestones timeline */}
       <section className="space-y-8 max-w-4xl mx-auto">
         <div className="text-center space-y-2">
-          <h2 className="font-display font-bold text-2xl text-text-primary">Evolution Timeline</h2>
+          <h2 className="font-display font-bold text-2xl text-slate-900 dark:text-white">Evolution Timeline</h2>
           <p className="text-xs text-slate-500 dark:text-slate-455 font-mono uppercase tracking-wide">HISTORIC STEPS</p>
         </div>
 
@@ -77,8 +77,8 @@ export default function About({ darkMode }: AboutProps) {
               <span className="font-display font-bold text-lg text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-cyan-400 mb-1 block font-mono">
                 {stone.year}
               </span>
-              <h4 className="font-display font-bold text-xs text-text-primary mb-2">{stone.title}</h4>
-              <p className="text-[11px] text-text-secondary font-sans leading-relaxed">{stone.text}</p>
+              <h4 className="font-display font-bold text-xs text-slate-900 dark:text-white mb-2">{stone.title}</h4>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-sans leading-relaxed">{stone.text}</p>
             </div>
           ))}
         </div>
@@ -87,7 +87,7 @@ export default function About({ darkMode }: AboutProps) {
       {/* Team cards section (3 members) */}
       <section className="space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="font-display font-bold text-2xl text-text-primary">The Engineering Guild</h2>
+          <h2 className="font-display font-bold text-2xl text-slate-900 dark:text-white">The Engineering Guild</h2>
           <p className="text-xs text-slate-500 dark:text-slate-455 font-mono uppercase tracking-wide">FOUNDING NODES</p>
         </div>
 
@@ -105,10 +105,10 @@ export default function About({ darkMode }: AboutProps) {
 
               <div className="p-5 space-y-2 font-sans">
                 <div className="space-y-0.5">
-                  <h4 className="font-display font-bold text-sm text-text-primary">{m.name}</h4>
+                  <h4 className="font-display font-bold text-sm text-slate-900 dark:text-white">{m.name}</h4>
                   <span className="text-[10px] font-mono tracking-wider font-semibold text-blue-500 dark:text-cyan-404">{m.role}</span>
                 </div>
-                <p className="text-xs text-text-secondary font-sans leading-relaxed pt-1.5 border-t border-slate-100 dark:border-slate-900">
+                <p className="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed pt-1.5 border-t border-slate-100 dark:border-slate-900">
                   {m.bio}
                 </p>
               </div>

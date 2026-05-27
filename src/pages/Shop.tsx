@@ -114,10 +114,10 @@ export default function Shop({
         <span className="text-[10px] uppercase font-mono tracking-widest text-blue-500 dark:text-cyan-400 font-bold">
           SECURE PROTOCOL CATALOG
         </span>
-        <h1 className="font-display font-bold text-3xl md:text-4xl text-text-primary">
+        <h1 className="font-display font-bold text-3xl md:text-4xl text-slate-900 dark:text-white">
           Hardware Marketplace
         </h1>
-        <p className="text-sm text-text-secondary font-sans max-w-xl">
+        <p className="text-sm text-slate-500 dark:text-slate-400 font-sans max-w-xl">
           Apply dynamic filters to configure custom hardware modules. Filter tactile keys, GaN travel modules, or AMOLED displays.
         </p>
       </div>
@@ -233,7 +233,7 @@ export default function Shop({
                     ? darkMode
                       ? 'bg-cyan-950/20 text-cyan-400'
                       : 'bg-blue-50 text-blue-600'
-                    : 'text-text-secondary hover:text-slate-900 dark:hover:text-white'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 All Brands
@@ -247,7 +247,7 @@ export default function Shop({
                       ? darkMode
                         ? 'bg-cyan-950/20 text-cyan-400'
                         : 'bg-blue-50 text-blue-600'
-                      : 'text-text-secondary hover:text-slate-900 dark:hover:text-white'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {brand}
@@ -262,7 +262,7 @@ export default function Shop({
               <label className="text-xs uppercase font-mono tracking-wider text-slate-400 font-bold">
                 Max Price Limits
               </label>
-              <span className="text-sm font-display font-medium text-text-primary font-mono tracking-tight glow-cyan">
+              <span className="text-sm font-display font-medium text-slate-900 dark:text-white font-mono tracking-tight glow-cyan">
                 ${maxPrice}
               </span>
             </div>
@@ -317,7 +317,7 @@ export default function Shop({
             />
             <label
               htmlFor="stock-only"
-              className="text-xs font-medium text-text-secondary cursor-pointer hover:text-slate-800 dark:hover:text-white"
+              className="text-xs font-medium text-slate-500 dark:text-slate-400 cursor-pointer hover:text-slate-800 dark:hover:text-white"
             >
               Only In Stock
             </label>
@@ -335,7 +335,7 @@ export default function Shop({
         {/* Main Grid Product List Column */}
         <div className="flex-1 w-full space-y-6">
           {/* Sorting / mobile trigger layout tools */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-100 dark:bg-slate-950/20 p-4 rounded-xl border border-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-100 dark:bg-slate-950/20 p-4 rounded-xl border border-slate-200 dark:border-slate-900">
             
             {/* Count */}
             <div className="text-sm font-sans text-slate-500 text-center sm:text-left">
@@ -384,15 +384,15 @@ export default function Shop({
 
           {/* Empty filtered grid state */}
           {filteredProducts.length === 0 ? (
-            <div className="text-center py-20 px-4 rounded-3xl border border-dashed border-border">
+            <div className="text-center py-20 px-4 rounded-3xl border border-dashed border-slate-200 dark:border-slate-900">
               <Search className="w-10 h-10 text-slate-400 mx-auto mb-3" />
               <h3 className="font-display font-medium text-lg text-slate-950 dark:text-white mb-2">No hardware matches filters</h3>
-              <p className="text-xs text-text-secondary max-w-sm mx-auto mb-6">
+              <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto mb-6">
                 Try expanding your maximum price slider, checking other categories, or clearing search query filters to display assets.
               </p>
               <button
                 onClick={resetFilters}
-                className="py-2.5 px-5 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-primary hover:bg-cyan-300 shadow-md cursor-pointer"
+                className="py-2.5 px-5 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md cursor-pointer"
               >
                 Reset Grid Filters
               </button>

@@ -167,7 +167,7 @@ export default function ProductDetail({
               </span>
             </div>
 
-            <h1 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-tight">
+            <h1 className="font-display font-bold text-3xl md:text-4xl text-slate-900 dark:text-white tracking-tight leading-tight">
               {product.name}
             </h1>
 
@@ -177,7 +177,7 @@ export default function ProductDetail({
                 <Star className="w-4 h-4 fill-amber-400" />
                 <span className="font-bold ml-1">{product.rating}</span>
               </div>
-              <span className="text-xs text-text-secondary font-sans">
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-sans">
                 ({product.reviewsCount} verified telemetry checkout logs)
               </span>
             </div>
@@ -201,7 +201,7 @@ export default function ProductDetail({
           </div>
 
           {/* Short summary text */}
-          <p className="text-text-secondary text-sm leading-relaxed font-sans mt-3">
+          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-sans mt-3">
             {product.description}
           </p>
 
@@ -289,12 +289,12 @@ export default function ProductDetail({
           </div>
 
           {/* Shipping Estimation Notice block */}
-          <div className="p-4 rounded-xl border border-dashed border-border bg-slate-50 dark:bg-slate-950/10 space-y-2 text-xs font-sans">
+          <div className="p-4 rounded-xl border border-dashed border-slate-200 dark:border-slate-900 bg-slate-50 dark:bg-slate-950/10 space-y-2 text-xs font-sans">
             <div className="flex gap-2 items-center text-slate-800 dark:text-slate-300 font-bold">
               <Truck className="w-4 h-4 text-cyan-400" />
               <span>Priority Telemetry Shipping Estimated</span>
             </div>
-            <p className="text-text-secondary">
+            <p className="text-slate-500 dark:text-slate-400">
               Complete dispatch settings within 2 hours to ship by tomorrow, arriving:
               <br />
               <span className="font-semibold text-slate-800 dark:text-slate-100 font-mono">
@@ -359,7 +359,7 @@ export default function ProductDetail({
           </div>
 
           {/* Accordions detailed specs specifications section */}
-          <div className="border-t border-border pt-6 space-y-4 font-sans">
+          <div className="border-t border-slate-200 dark:border-slate-900 pt-6 space-y-4 font-sans">
             
             {/* 1. Description long Manifesto */}
             <div className="border-b border-slate-200/50 dark:border-slate-900 pb-4">
@@ -371,7 +371,7 @@ export default function ProductDetail({
                 {openAccordions.description ? <ChevronUp className="w-4 h-4 text-slate-500" /> : <ChevronDown className="w-4 h-4 text-slate-500" />}
               </button>
               {openAccordions.description && (
-                <p className="text-xs text-text-secondary mt-3 leading-relaxed max-w-2xl">
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-3 leading-relaxed max-w-2xl">
                   {product.fullDescription}
                 </p>
               )}
@@ -401,7 +401,7 @@ export default function ProductDetail({
                               : 'bg-transparent'
                           } border-b border-slate-200/50 dark:border-slate-900/50 last:border-0`}
                         >
-                          <td className="p-3 font-semibold text-text-secondary font-mono text-[10px] uppercase w-1/3">
+                          <td className="p-3 font-semibold text-slate-500 dark:text-slate-400 font-mono text-[10px] uppercase w-1/3">
                             {key}
                           </td>
                           <td className="p-3 text-slate-800 dark:text-slate-300 font-medium">
@@ -446,15 +446,15 @@ export default function ProductDetail({
       </div>
 
       {/* Recommended/Complementary Products Cards List */}
-      <section className="py-12 border-t border-border">
+      <section className="py-12 border-t border-slate-200 dark:border-slate-900">
         <div className="space-y-3 mb-8">
           <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#22d3ee]">
             PEER EVALUATED
           </span>
-          <h2 className="font-display font-bold text-2xl text-text-primary">
+          <h2 className="font-display font-bold text-2xl text-slate-900 dark:text-white">
             You May Also Configure
           </h2>
-          <p className="text-xs text-text-secondary font-sans">
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-sans">
             Other functional modules compatible with your hardware workspace setups.
           </p>
         </div>

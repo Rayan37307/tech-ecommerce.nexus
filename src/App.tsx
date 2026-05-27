@@ -53,7 +53,7 @@ export default function App() {
   const [appliedCoupon, setAppliedCoupon] = useState<{ code: string; discountPercent: number; flatDiscount: number } | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
@@ -75,10 +75,11 @@ export default function App() {
       const savedProfile = localStorage.getItem('nexus_tech_profile');
       if (savedProfile) setUserProfile(JSON.parse(savedProfile));
 
-      const savedTheme = localStorage.getItem('nexus_tech_theme');
-      if (savedTheme !== null) {
-        setDarkMode(savedTheme === 'true');
-      }
+      // Theme always light - no dark mode
+      // const savedTheme = localStorage.getItem('nexus_tech_theme');
+      // if (savedTheme !== null) {
+      //   setDarkMode(savedTheme === 'true');
+      // }
     } catch (e) {
       console.error('Failed to restore telemetry databases from local storage:', e);
     }

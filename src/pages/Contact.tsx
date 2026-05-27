@@ -36,7 +36,7 @@ export default function Contact({ darkMode }: ContactProps) {
         <h1 className="font-display font-bold text-3xl md:text-4xl text-slate-905 dark:text-white">
           Contact Support Dispatch
         </h1>
-        <p className="text-sm text-text-secondary font-sans leading-relaxed">
+        <p className="text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
           Log active telemetry tickets or locate regional fulfillment coordinates. Our hardware support nodes operate continuously.
         </p>
       </div>
@@ -48,7 +48,7 @@ export default function Contact({ darkMode }: ContactProps) {
           <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-900' : 'bg-white border-slate-200 shadow-lg'}`}>
             <div className="flex gap-2 items-center mb-6 pb-2 border-b border-slate-250 dark:border-slate-900">
               <MessageCircle className="w-5 h-5 text-cyan-405" />
-              <h2 className="font-display font-semibold text-base text-text-primary">Inquiry Ticket Dispatch</h2>
+              <h2 className="font-display font-semibold text-base text-slate-900 dark:text-white">Inquiry Ticket Dispatch</h2>
             </div>
 
             {notified && (
@@ -118,7 +118,7 @@ export default function Contact({ darkMode }: ContactProps) {
               <div className="flex justify-end pt-4 border-t border-slate-100 dark:border-slate-900">
                 <button
                   type="submit"
-                  className="py-3 px-6 rounded-xl font-bold font-mono text-xs uppercase tracking-widest text-slate-950 bg-primary hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="py-3 px-6 rounded-xl font-bold font-mono text-xs uppercase tracking-widest text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
                   id="ticket-dispatch-submit-btn"
                 >
                   <span>Dispatch ticket</span>
@@ -133,10 +133,10 @@ export default function Contact({ darkMode }: ContactProps) {
         <aside className="lg:col-span-4 space-y-6">
           <div
             className={`border rounded-2xl p-5 space-y-6 text-left ${
-              darkMode ? 'bg-text' : 'bg-surface'
+              darkMode ? 'bg-slate-950 border-slate-905 text-slate-300' : 'bg-slate-50 border-slate-200 shadow-xs'
             }`}
           >
-            <h3 className="font-display font-semibold text-sm text-text-primary uppercase tracking-wider pb-3 border-b border-slate-250 dark:border-slate-900">
+            <h3 className="font-display font-semibold text-sm text-slate-900 dark:text-white uppercase tracking-wider pb-3 border-b border-slate-250 dark:border-slate-900">
               Dispatch Nodes
             </h3>
 
@@ -191,7 +191,7 @@ export default function Contact({ darkMode }: ContactProps) {
           </div>
 
           {/* Embedded static graphic map coordinates frame */}
-          <div className="rounded-2xl border border-border overflow-hidden h-40 relative group shadow-sm bg-slate-900/40">
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-900 overflow-hidden h-40 relative group shadow-sm bg-slate-900/40">
             {/* Fake map drawing via CSS styling elements */}
             <div className="absolute inset-0 bg-[#0a0f1d] p-4 flex flex-col justify-between text-slate-400 font-mono text-[9px] select-none pointer-events-none">
               <div className="flex justify-between">
@@ -203,8 +203,8 @@ export default function Contact({ darkMode }: ContactProps) {
               <div className="absolute inset-0 bg-radial-grid opacity-15" />
 
               <div className="self-center flex flex-col items-center space-y-1 relative z-10">
-                <div className="w-6 h-6 rounded-full bg-primary/20 border border-cyan-455 animate-pulse flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                <div className="w-6 h-6 rounded-full bg-cyan-400/20 border border-cyan-455 animate-pulse flex items-center justify-center">
+                  <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
                 </div>
                 <span className="text-[8px] font-bold text-white bg-slate-950 px-2 py-0.5 rounded border border-slate-800">
                   NEXUS SECURE VAULT

@@ -64,7 +64,7 @@ export default function Auth({ onLoginSuccess, setView, darkMode }: AuthProps) {
       >
         {/* Banner with spark icon */}
         <div className="text-center space-y-2">
-          <div className="inline-flex py-1.5 px-3 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/15 dark:border-cyan-500/20 text-primary text-[10px] font-mono font-bold uppercase tracking-wider">
+          <div className="inline-flex py-1.5 px-3 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/15 dark:border-cyan-500/20 text-blue-600 dark:text-cyan-400 text-[10px] font-mono font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>NEXUS CLOUD ACCESS</span>
           </div>
@@ -177,7 +177,7 @@ export default function Auth({ onLoginSuccess, setView, darkMode }: AuthProps) {
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-xl text-slate-950 bg-primary hover:bg-cyan-300 font-bold font-mono tracking-wider uppercase text-xs shadow-md mt-6 cursor-pointer"
+              className="w-full py-3.5 rounded-xl text-slate-950 bg-cyan-400 hover:bg-cyan-300 font-bold font-mono tracking-wider uppercase text-xs shadow-md mt-6 cursor-pointer"
               id="login-submit-btn"
             >
               Sign In Node
@@ -250,7 +250,7 @@ export default function Auth({ onLoginSuccess, setView, darkMode }: AuthProps) {
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-xl text-slate-950 bg-primary hover:bg-cyan-300 font-bold font-mono tracking-wider uppercase text-xs shadow-md mt-4 cursor-pointer"
+              className="w-full py-3.5 rounded-xl text-slate-950 bg-cyan-400 hover:bg-cyan-300 font-bold font-mono tracking-wider uppercase text-xs shadow-md mt-4 cursor-pointer"
               id="register-submit-btn"
             >
               Construct credentials

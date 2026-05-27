@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Tech Store",
+  "description": "A sleek, premium tech e-commerce store with futuristic layouts, glowing accents, real-time interactive cart and wishlists, multi-step checkout, and modern SaaS aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

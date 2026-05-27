@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  /* User-provided Master Theme Colors */
+  --color-primary: #c78d42;
+  --color-secondary: #e2bf8f;
+  --color-accent: #dca760;
+  --color-text: #130e07;
+  --color-background: #fcf9f6;
+
+  /* Redefining default black/white to fit the warm palette */
+  --color-white: #fcf9f6;
+  --color-black: #130e07;
+
+  /* Override Tailwind neutral scales (slate, zinc, gray, Neutral, stone) to avoid light/dark contrast and converge on warm cream/gold theme */
+  --color-slate-50: #fcf9f6;
+  --color-slate-100: #faf4ec;
+  --color-slate-200: #e2bf8f;
+  --color-slate-300: #dca760;
+  --color-slate-400: #c78d42;
+  --color-slate-500: #a7712f;
+  --color-slate-600: #7a4f1c;
+  --color-slate-700: #51320d;
+  --color-slate-800: #331f08;
+  --color-slate-900: #130e07;
+  --color-slate-950: #fcf9f6;
+
+  --color-gray-50: #fcf9f6;
+  --color-gray-100: #faf4ec;
+  --color-gray-200: #e2bf8f;
+  --color-gray-300: #dca760;
+  --color-gray-400: #c78d42;
+  --color-gray-500: #a7712f;
+  --color-gray-600: #7a4f1c;
+  --color-gray-700: #51320d;
+  --color-gray-800: #331f08;
+  --color-gray-900: #130e07;
+  --color-gray-950: #fcf9f6;
+
+  --color-zinc-50: #fcf9f6;
+  --color-zinc-100: #faf4ec;
+  --color-zinc-200: #e2bf8f;
+  --color-zinc-300: #dca760;
+  --color-zinc-400: #c78d42;
+  --color-zinc-500: #a7712f;
+  --color-zinc-600: #7a4f1c;
+  --color-zinc-700: #51320d;
+  --color-zinc-800: #331f08;
+  --color-zinc-900: #130e07;
+  --color-zinc-950: #fcf9f6;
+
+  --color-neutral-50: #fcf9f6;
+  --color-neutral-100: #faf4ec;
+  --color-neutral-200: #e2bf8f;
+  --color-neutral-300: #dca760;
+  --color-neutral-400: #c78d42;
+  --color-neutral-500: #a7712f;
+  --color-neutral-600: #7a4f1c;
+  --color-neutral-700: #51320d;
+  --color-neutral-800: #331f08;
+  --color-neutral-900: #130e07;
+  --color-neutral-950: #fcf9f6;
+
+  --color-stone-50: #fcf9f6;
+  --color-stone-100: #faf4ec;
+  --color-stone-200: #e2bf8f;
+  --color-stone-300: #dca760;
+  --color-stone-400: #c78d42;
+  --color-stone-500: #a7712f;
+  --color-stone-600: #7a4f1c;
+  --color-stone-700: #51320d;
+  --color-stone-800: #331f08;
+  --color-stone-900: #130e07;
+  --color-stone-950: #fcf9f6;
+
+  /* Map accent highlight categories (blue, cyan, indigo, violet, sky) to primary/gold theme colors */
+  --color-blue-50: #faf4ec;
+  --color-blue-100: #faf4ec;
+  --color-blue-200: #e2bf8f;
+  --color-blue-300: #dca760;
+  --color-blue-400: #c78d42;
+  --color-blue-500: #c78d42;
+  --color-blue-600: #c78d42;
+  --color-blue-700: #a7712f;
+  --color-blue-800: #7a4f1c;
+  --color-blue-900: #331f08;
+  --color-blue-950: #130e07;
+
+  --color-cyan-50: #faf4ec;
+  --color-cyan-100: #faf4ec;
+  --color-cyan-200: #e2bf8f;
+  --color-cyan-300: #dca760;
+  --color-cyan-400: #c78d42;
+  --color-cyan-500: #c78d42;
+  --color-cyan-600: #c78d42;
+  --color-cyan-700: #a7712f;
+  --color-cyan-800: #7a4f1c;
+  --color-cyan-900: #331f08;
+  --color-cyan-950: #130e07;
+
+  --color-indigo-50: #faf4ec;
+  --color-indigo-100: #faf4ec;
+  --color-indigo-200: #e2bf8f;
+  --color-indigo-300: #dca760;
+  --color-indigo-400: #c78d42;
+  --color-indigo-500: #c78d42;
+  --color-indigo-600: #c78d42;
+  --color-indigo-700: #a7712f;
+  --color-indigo-800: #7a4f1c;
+  --color-indigo-900: #331f08;
+  --color-indigo-950: #130e07;
+
+  --color-violet-50: #faf4ec;
+  --color-violet-100: #faf4ec;
+  --color-violet-200: #e2bf8f;
+  --color-violet-300: #dca760;
+  --color-violet-400: #c78d42;
+  --color-violet-500: #c78d42;
+  --color-violet-600: #c78d42;
+  --color-violet-700: #a7712f;
+  --color-violet-800: #7a4f1c;
+  --color-violet-900: #331f08;
+  --color-violet-950: #130e07;
+
+  --color-sky-50: #faf4ec;
+  --color-sky-100: #faf4ec;
+  --color-sky-200: #e2bf8f;
+  --color-sky-300: #dca760;
+  --color-sky-400: #c78d42;
+  --color-sky-500: #c78d42;
+  --color-sky-600: #c78d42;
+  --color-sky-700: #a7712f;
+  --color-sky-800: #7a4f1c;
+  --color-sky-900: #331f08;
+  --color-sky-950: #130e07;
+
+  --color-cyber-cyan: #dca760;
+}
+
+@layer base {
+  body {
+    background-color: #fcf9f6;
+    color: #130e07;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+  
+  /* Universal high-contrast text color override: Only use black (#130e07) for texts by default across the entire app */
+  body, p, span, h1, h2, h3, h4, h5, h6, label, input, select, textarea, a, b, strong, em, i, li, button {
+    color: #130e07;
+  }
+  
+  /* BUT on top of black/dark backgrounds or custom light-text elements, use white/light text (#fcf9f6) */
+  .bg-black, .bg-black *,
+  .bg-slate-900, .bg-slate-900 *,
+  .bg-\[\#130e07\], .bg-\[\#130e07\] *,
+  [class*="bg-black"], [class*="bg-black"] *,
+  [class*="bg-slate-900"], [class*="bg-slate-900"] *,
+  [class*="bg-[#130e07]"], [class*="bg-[#130e07]"] *,
+  .text-white, .text-white *,
+  .text-slate-50, .text-slate-50 *,
+  .text-amber-400, .text-amber-400 *,
+  .text-cyan-400, .text-cyan-400 *,
+  .text-cyan-500, .text-cyan-500 * {
+    color: #fcf9f6 !important;
+  }
+
+  .force-black-text, .force-black-text * {
+    color: #130e07 !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom glow and glassmorphism utilities matching the warm theme */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(220, 167, 96, 0.5), 0 0 20px rgba(220, 167, 96, 0.2);
+}
+
+.glow-blue {
+  text-shadow: 0 0 10px rgba(199, 141, 66, 0.5), 0 0 20px rgba(199, 141, 66, 0.2);
+}
+
+.glow-border-cyan {
+  box-shadow: 0 0 15px rgba(220, 167, 96, 0.15);
+  border-color: rgba(220, 167, 96, 0.4);
+}
+
+.glow-border-blue {
+  box-shadow: 0 0 15px rgba(199, 141, 66, 0.15);
+  border-color: rgba(199, 141, 66, 0.4);
+}
+
+.glass-panel {
+  background: rgba(252, 249, 246, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(199, 141, 66, 0.2);
+}
+
+.glass-panel-light {
+  background: rgba(252, 249, 246, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(199, 141, 66, 0.2);
+}
+
+/* Hide scrollbars but keep functionality if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

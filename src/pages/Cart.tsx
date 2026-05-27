@@ -69,14 +69,14 @@ export default function Cart({
           <ShoppingBag className="w-9 h-9" />
         </div>
         <div className="space-y-2">
-          <h2 className="font-display font-bold text-2xl text-slate-900 dark:text-white">Your Basket is Empty</h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+          <h2 className="font-display font-bold text-2xl text-text-primary">Your Basket is Empty</h2>
+          <p className="text-sm text-text-secondary font-sans leading-relaxed">
             No technical hardware modules have been authorized to this dispatch session. Initialize configurations from our marketplace.
           </p>
         </div>
         <button
           onClick={() => setView('shop')}
-          className="w-full py-4 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
+          className="w-full py-4 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-primary hover:bg-cyan-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
         >
           <span>Marketplace Catalog</span>
           <ArrowRight className="w-4 h-4" />
@@ -93,7 +93,7 @@ export default function Cart({
         <span className="text-[10px] font-mono tracking-widest text-[#22d3ee] font-bold">
           SECURITY BASKET REGISTER
         </span>
-        <h1 className="font-display font-bold text-3xl md:text-4xl text-slate-900 dark:text-white">
+        <h1 className="font-display font-bold text-3xl md:text-4xl text-text-primary">
           Active Shopping Basket
         </h1>
       </div>
@@ -102,10 +102,10 @@ export default function Cart({
         
         {/* Left Side: Cart Items List */}
         <div className="lg:col-span-8 space-y-4">
-          <div className="rounded-2xl border overflow-hidden border-slate-200 dark:border-slate-900">
+          <div className="rounded-2xl border overflow-hidden border-border">
             
             {/* Header row descriptor */}
-            <div className="hidden md:grid grid-cols-12 p-4 text-[10px] font-mono uppercase tracking-wider text-slate-500 bg-slate-100 dark:bg-slate-950/40 border-b border-slate-200 dark:border-slate-900 font-bold">
+            <div className="hidden md:grid grid-cols-12 p-4 text-[10px] font-mono uppercase tracking-wider text-slate-500 bg-slate-100 dark:bg-slate-950/40 border-b border-border font-bold">
               <div className="col-span-6">Configure Specifications</div>
               <div className="col-span-2 text-center">Price Index</div>
               <div className="col-span-2 text-center">Quantity</div>
@@ -209,7 +209,7 @@ export default function Cart({
           </div>
 
           {/* Quick Info Assurances */}
-          <div className="flex items-start gap-3 p-4 rounded-xl border border-blue-500/10 bg-blue-500/5 text-xs text-slate-500 dark:text-slate-400 max-w-xl">
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-blue-500/10 bg-blue-500/5 text-xs text-text-secondary max-w-xl">
             <ShieldCheck className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               Your telemetry variables are tracked locally using local index keys. Checkout actions are routed under TLS-secured configurations. No credentials leak from browser files.
@@ -221,18 +221,18 @@ export default function Cart({
         <aside className="lg:col-span-4 space-y-6">
           <div
             className={`border rounded-2xl p-6 space-y-5 ${
-              darkMode ? 'bg-slate-950 border-slate-900 Text-slate-200' : 'bg-slate-50 border-slate-200 shadow-sm'
+              darkMode ? 'bg-text' : 'bg-surface'
             }`}
           >
-            <h3 className="font-display font-bold text-base text-slate-900 dark:text-white pb-3 border-b border-slate-250 dark:border-slate-900">
+            <h3 className="font-display font-bold text-base text-text-primary pb-3 border-b border-slate-250 dark:border-slate-900">
               Session Invoice Summary
             </h3>
 
             {/* Price Ledger details */}
-            <div className="space-y-3.5 text-xs font-sans text-slate-500 dark:text-slate-400">
+            <div className="space-y-3.5 text-xs font-sans text-text-secondary">
               <div className="flex justify-between">
                 <span>Hardware Subtotal:</span>
-                <span className="font-semibold text-slate-900 dark:text-white font-mono">${subtotal}</span>
+                <span className="font-semibold text-text-primary font-mono">${subtotal}</span>
               </div>
 
               {/* Coupon discounts if present */}
@@ -248,7 +248,7 @@ export default function Cart({
 
               <div className="flex justify-between">
                 <span>Insured Freight Delivery:</span>
-                <span className="font-semibold text-slate-900 dark:text-white font-mono">
+                <span className="font-semibold text-text-primary font-mono">
                   {shipping === 0 ? 'FREE' : `$${shipping}`}
                 </span>
               </div>
@@ -316,7 +316,7 @@ export default function Cart({
             {/* Proceeds trigger */}
             <button
               onClick={handleProceedToCheckout}
-              className="w-full py-4 rounded-xl font-bold font-mono text-xs uppercase tracking-widest text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md flex items-center justify-center gap-2 transform active:scale-98 transition-all cursor-pointer"
+              className="w-full py-4 rounded-xl font-bold font-mono text-xs uppercase tracking-widest text-slate-950 bg-primary hover:bg-cyan-300 shadow-md flex items-center justify-center gap-2 transform active:scale-98 transition-all cursor-pointer"
               id="cart-checkout-cta-btn"
             >
               <span>Authorized Checkout</span>

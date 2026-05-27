@@ -28,7 +28,7 @@ export default function Home({
   useEffect(() => {
     const alerts = [
       'Limited: Only 12 items left in the Gaming category',
-      'Trending: Mechanical keyboards are this week's bestsellers',
+      "Trending: Mechanical keyboards are this week's bestsellers",
       'Sale: Free shipping on orders above $100',
       'New: Premium wireless keyboards now in stock'
     ];

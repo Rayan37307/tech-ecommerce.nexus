@@ -29,10 +29,10 @@ export default function NotFound({ setView, setSearchQuery, darkMode }: NotFound
         <span className="font-display font-black text-8xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-tr from-rose-500 via-indigo-500 to-cyan-400 glow-cyan font-mono tracking-tighter select-none">
           404
         </span>
-        <h1 className="font-display font-medium text-lg text-slate-900 dark:text-white uppercase font-mono tracking-widest">
+        <h1 className="font-display font-medium text-lg text-text-primary uppercase font-mono tracking-widest">
           Telemetry Vector Misaligned
         </h1>
-        <p className="text-xs text-slate-500 dark:text-slate-400 font-sans max-w-sm mx-auto leading-relaxed">
+        <p className="text-xs text-text-secondary font-sans max-w-sm mx-auto leading-relaxed">
           The hardware catalog node coordinates you requested could not be resolved in the sandbox servers. Perform a localized search query.
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function NotFound({ setView, setSearchQuery, darkMode }: NotFound
         
         <button
           onClick={() => setView('shop')}
-          className="flex-1 py-4 rounded-xl font-bold font-mono text-[10px] uppercase tracking-wider text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+          className="flex-1 py-4 rounded-xl font-bold font-mono text-[10px] uppercase tracking-wider text-slate-950 bg-primary hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1.5 transition-all cursor-pointer"
         >
           <span>Shop Products</span>
           <ArrowRight className="w-3.5 h-3.5" />

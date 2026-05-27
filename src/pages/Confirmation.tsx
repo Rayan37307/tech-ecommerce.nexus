@@ -59,25 +59,25 @@ export default function Confirmation({ lastOrder, setView, darkMode }: Confirmat
 
       {/* Basic Metrics Display */}
       <div className={`text-left p-6 rounded-2xl border divide-y ${
-        darkMode ? 'bg-slate-950 border-slate-900 divide-slate-900' : 'bg-slate-50 border-slate-200 divide-slate-200 shadow-sm'
+        darkMode ? 'bg-text' : 'bg-surface'
       }`}>
         {/* Core numbers */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-4 text-xs font-mono">
           <div className="space-y-1">
             <span className="text-slate-500 font-bold text-[9px] uppercase">Order ID</span>
-            <p className="font-semibold text-slate-900 dark:text-white">{order.id}</p>
+            <p className="font-semibold text-text-primary">{order.id}</p>
           </div>
           <div className="space-y-1">
             <span className="text-slate-500 font-bold text-[9px] uppercase">Invoice Date</span>
-            <p className="font-semibold text-slate-900 dark:text-white">{order.date}</p>
+            <p className="font-semibold text-text-primary">{order.date}</p>
           </div>
           <div className="space-y-1">
             <span className="text-slate-500 font-bold text-[9px] uppercase">Total Charged</span>
-            <p className="font-semibold text-slate-900 dark:text-white">${order.total}</p>
+            <p className="font-semibold text-text-primary">${order.total}</p>
           </div>
           <div className="space-y-1">
             <span className="text-slate-500 font-bold text-[9px] uppercase">Telemetry Speed</span>
-            <p className="font-semibold text-slate-900 dark:text-white truncate" title={order.shippingMethod}>
+            <p className="font-semibold text-text-primary truncate" title={order.shippingMethod}>
               {order.shippingMethod}
             </p>
           </div>
@@ -85,11 +85,11 @@ export default function Confirmation({ lastOrder, setView, darkMode }: Confirmat
 
         {/* Dispatch details Address */}
         <div className="py-4 space-y-2">
-          <div className="flex gap-2 items-center text-xs text-slate-900 dark:text-white font-bold">
+          <div className="flex gap-2 items-center text-xs text-text-primary font-bold">
             <Truck className="w-4 h-4 text-cyan-400" />
             <span>Fulfillment Transit Destination Coordinates</span>
           </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400 font-sans">
+          <p className="text-xs text-text-secondary font-sans">
             Recipient: <strong>{order.address.name}</strong> • Phone: {order.address.phone} <br />
             Address: {order.address.street}, {order.address.city}, {order.address.state} {order.address.zip}, {order.address.country}
           </p>
@@ -102,7 +102,7 @@ export default function Confirmation({ lastOrder, setView, darkMode }: Confirmat
           </div>
           <div className="space-y-1">
             <span className="font-bold text-slate-900 dark:text-slate-200">Estimated Delivery Dispatch Target</span>
-            <p className="text-slate-500 dark:text-slate-400">
+            <p className="text-text-secondary">
               Your hardware is computed arrive within <strong className="text-slate-800 dark:text-white font-mono">{order.deliveryEstimate}</strong>. Tracking barcodes will dispatch via {order.address.email}.
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function Confirmation({ lastOrder, setView, darkMode }: Confirmat
             setView('shop');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="flex-1 py-4.5 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1 cursor-pointer font-bold"
+          className="flex-1 py-4.5 rounded-xl font-bold font-mono text-xs uppercase tracking-wider text-slate-950 bg-primary hover:bg-cyan-300 shadow-md flex items-center justify-center gap-1 cursor-pointer font-bold"
         >
           <span>Continue Shopping</span>
           <ChevronRight className="w-4 h-4" />

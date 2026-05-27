@@ -1,0 +1,106 @@
+/* Hallmark · Nexus Tech Store · Export Format: tokens.css
+ * Theme: Custom (modern, luxury retail, contemporary minimal)
+ * Generated: 2026-05-27
+ * Portable across Tailwind + vanilla CSS projects
+ */
+
+:root {
+  /* Typography tokens */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  /* Master color palette — OKLCH */
+  --color-text: oklch(5% 0.01 0);
+  --color-background: oklch(98% 0.01 250);
+  --color-primary: oklch(54% 0.15 348);
+  --color-secondary: oklch(73% 0.12 355);
+  --color-accent: oklch(57% 0.22 350);
+
+  /* Functional colors */
+  --color-surface: oklch(100% 0 0);
+  --color-surface-alt: oklch(96% 0.01 250);
+  --color-border: oklch(88% 0.02 250);
+  --color-border-strong: oklch(75% 0.05 348);
+  --color-divider: oklch(92% 0.01 0);
+
+  /* Semantic */
+  --color-success: oklch(63% 0.16 142);
+  --color-warning: oklch(71% 0.16 60);
+  --color-error: oklch(60% 0.22 24);
+  --color-info: oklch(59% 0.15 240);
+
+  /* Neutral scale for text hierarchy */
+  --color-text-primary: oklch(5% 0.01 0);
+  --color-text-secondary: oklch(42% 0.02 0);
+  --color-text-tertiary: oklch(65% 0.03 0);
+  --color-text-disabled: oklch(78% 0.02 0);
+
+  /* Interaction states */
+  --color-hover: oklch(54% 0.18 348);
+  --color-active: oklch(48% 0.17 348);
+  --color-focus: oklch(57% 0.22 350);
+
+  /* Spacing — 4pt scale */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Typography scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-display: 4.5rem;
+  --text-display-s: 3.75rem;
+
+  /* Line height */
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+  --line-relaxed: 1.75;
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+
+  /* Border radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-base: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Motion */
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in: cubic-bezier(1, 0, 0.8, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+}

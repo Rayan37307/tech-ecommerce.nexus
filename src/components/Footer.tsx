@@ -24,51 +24,39 @@ export default function Footer({ setView, darkMode }: FooterProps) {
   };
 
   return (
-    <footer
-      className={`relative pt-16 pb-12 overflow-hidden border-t ${
-        darkMode
-          ? 'bg-slate-950 border-slate-900 text-slate-300'
-          : 'bg-slate-50 border-slate-200 text-slate-600'
-      }`}
-    >
-      {/* Background cyber accent loop */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 dark:bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-400/5 dark:bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+    <footer className="relative pt-16 pb-12 overflow-hidden border-t border-border bg-surface-alt">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          
-          {/* Column 1: Brand Pitch & Socials */}
+          {/* Brand */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleLinkClick('home')}>
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-base shadow-md">
-                <Laptop className="w-4.5 h-4.5" />
+            <button
+              onClick={() => handleLinkClick('home')}
+              className="flex items-center gap-2 cursor-pointer group"
+            >
+              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-surface font-bold text-base shadow-md group-hover:shadow-lg group-hover:-translate-y-0.5 transition-all">
+                <Laptop className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-bold text-lg leading-none text-slate-950 dark:text-white group-hover:text-cyan-400 transition-colors">
+                <span className="font-display font-bold text-lg leading-none text-text-primary group-hover:text-primary transition-colors">
                   NEXUS
                 </span>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-blue-500 dark:text-cyan-400 font-semibold leading-none mt-1">
-                  ELECTRONICS
+                <span className="text-[9px] uppercase font-mono tracking-wider text-primary font-semibold leading-none mt-1">
+                  TECH
                 </span>
               </div>
-            </div>
-            
-            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-sans">
-              Forging future-ready hardware configurations and premium physical setup mechanics. Clean layouts, glowing signals, and elite tactical durability.
+            </button>
+
+            <p className="text-sm text-text-secondary leading-relaxed">
+              Premium tech gear for modern workspaces. Quality products designed for performance and style.
             </p>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-3">
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className={`p-2 rounded-lg border transition-all ${
-                  darkMode
-                    ? 'bg-slate-900 border-slate-800 hover:border-cyan-400 hover:text-cyan-400'
-                    : 'bg-white border-slate-200 hover:border-blue-600 hover:text-blue-600'
-                }`}
+                className="p-2 rounded-lg border border-border bg-surface text-text-secondary hover:text-primary hover:border-primary transition-all"
               >
                 <Github className="w-4 h-4" />
               </a>
@@ -76,11 +64,7 @@ export default function Footer({ setView, darkMode }: FooterProps) {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                className={`p-2 rounded-lg border transition-all ${
-                  darkMode
-                    ? 'bg-slate-900 border-slate-800 hover:border-cyan-400 hover:text-cyan-400'
-                    : 'bg-white border-slate-200 hover:border-blue-600 hover:text-blue-600'
-                }`}
+                className="p-2 rounded-lg border border-border bg-surface text-text-secondary hover:text-primary hover:border-primary transition-all"
               >
                 <Twitter className="w-4 h-4" />
               </a>
@@ -88,118 +72,106 @@ export default function Footer({ setView, darkMode }: FooterProps) {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className={`p-2 rounded-lg border transition-all ${
-                  darkMode
-                    ? 'bg-slate-900 border-slate-800 hover:border-cyan-400 hover:text-cyan-400'
-                    : 'bg-white border-slate-200 hover:border-blue-600 hover:text-blue-600'
-                }`}
+                className="p-2 rounded-lg border border-border bg-surface text-text-secondary hover:text-primary hover:border-primary transition-all"
               >
                 <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Column 2: Quick Navigation */}
+          {/* Shop */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              E-Commerce Hub
+            <h4 className="font-display font-semibold text-sm text-text-primary uppercase tracking-wider">
+              Shop
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <button
                   onClick={() => handleLinkClick('shop')}
-                  className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors text-slate-500 dark:text-slate-400"
+                  className="text-text-secondary hover:text-primary transition-colors"
                 >
-                  Products Catalog (Shop)
+                  All Products
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleLinkClick('about')}
-                  className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors text-slate-500 dark:text-slate-400"
+                  className="text-text-secondary hover:text-primary transition-colors"
                 >
-                  Our Brand Manifesto
+                  About Us
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleLinkClick('contact')}
-                  className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors text-slate-500 dark:text-slate-400"
+                  className="text-text-secondary hover:text-primary transition-colors"
                 >
-                  Interactive Customer Support
+                  Contact
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => handleLinkClick('faq')}
-                  className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors text-slate-500 dark:text-slate-400"
+                  className="text-text-secondary hover:text-primary transition-colors"
                 >
-                  Frequently Asked Questions
+                  FAQ
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Warranty & Support */}
+          {/* Support */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              Assurance Policy
+            <h4 className="font-display font-semibold text-sm text-text-primary uppercase tracking-wider">
+              Support
             </h4>
-            <ul className="space-y-3.5 text-sm text-slate-500 dark:text-slate-400">
+            <ul className="space-y-3 text-sm text-text-secondary">
               <li className="flex gap-2 items-start">
-                <RefreshCcw className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <span>30-Day Comfort Returns</span>
+                <RefreshCcw className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <span>30-day returns</span>
               </li>
               <li className="flex gap-2 items-start">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span>1-Year Hardware Warranty</span>
+                <ShieldCheck className="w-4 h-4 text-success flex-shrink-0 mt-0.5" />
+                <span>1-year warranty</span>
               </li>
-              <li className="text-xs pt-1 border-t border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 leading-snug">
-                Need urgent technical telemetry assistance? Reach out via:
-                <br />
-                <span className="font-mono text-[11px] text-slate-800 dark:text-slate-300 font-semibold">
-                  support@nexustech.io
-                </span>
+              <li className="text-xs pt-2 border-t border-border text-text-tertiary">
+                <span className="block mb-1">Contact us:</span>
+                <span className="font-mono text-text-secondary">support@nexustech.io</span>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Newsletter Submission Box */}
+          {/* Newsletter */}
           <div className="space-y-4">
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              Telemetry Dispatch (Email)
+            <h4 className="font-display font-semibold text-sm text-text-primary uppercase tracking-wider">
+              Newsletter
             </h4>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-sans">
-              Subscribe to recieve real-time discount coupons and upcoming firmware drop alerts.
+            <p className="text-xs text-text-secondary leading-relaxed">
+              Get exclusive updates and promotions.
             </p>
 
             {subscribed ? (
-              <div className="p-3.5 rounded-xl text-center bg-cyan-950/20 border border-cyan-500/30 text-cyan-400 text-xs font-medium tracking-tight animate-fade-in animate-duration-300">
-                🚀 Subscribed successfully! Double discount drops inbound.
+              <div className="p-3 rounded-lg text-center bg-success/10 border border-success/20 text-success text-xs font-medium">
+                ✓ Subscribed successfully!
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-1.5 flex-col xs:flex-row">
-                <div className="relative flex-1">
-                  <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+              <form onSubmit={handleSubscribe} className="flex gap-2 flex-col">
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-tertiary" />
                   <input
                     type="email"
                     required
-                    placeholder="Enter email address"
+                    placeholder="Your email"
                     value={emailValue}
                     onChange={(e) => setEmailValue(e.target.value)}
-                    className={`w-full pl-9 pr-3 py-2.5 rounded-xl text-xs outline-none border transition-all ${
-                      darkMode
-                        ? 'bg-slate-900 border-slate-800 text-slate-200 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400'
-                        : 'bg-white border-slate-200 text-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
-                    }`}
+                    className="w-full pl-9 pr-3 py-2 rounded-lg text-xs outline-none border border-border bg-surface text-text-primary focus:border-primary transition-all"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="py-2.5 px-3.5 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 text-white font-semibold text-xs flex items-center justify-center gap-1 hover:opacity-90 transition-all cursor-pointer"
-                  id="newsletter-subscribe-btn"
+                  className="btn btn-primary text-xs"
                 >
-                  <span>Go</span>
+                  <span>Subscribe</span>
                   <ArrowRight className="w-3 h-3" />
                 </button>
               </form>
@@ -207,34 +179,19 @@ export default function Footer({ setView, darkMode }: FooterProps) {
           </div>
         </div>
 
-        {/* Divider separator */}
-        <div className="my-10 h-[1.5px] bg-slate-200/50 dark:bg-slate-900" />
+        <div className="my-8 h-px bg-border" />
 
-        {/* Bottom bar with Copyright and Payments */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-slate-500 dark:text-slate-400 font-sans">
-          <div>
-            <p>© 2026 Nexus Electronics Co. All rights under digital encryption.</p>
-            <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">
-              Sleek hardware crafted with standard compliance layers. Registered with priority telemetry grids.
-            </p>
-          </div>
-
-          {/* Payment badges */}
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400 font-semibold mr-1">
-              PAYMENTS:
+        {/* Bottom */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-text-tertiary">
+          <p>© 2026 Nexus Electronics. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-[9px] uppercase tracking-wider font-semibold">
+              Payments:
             </span>
-            <div className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/10 hover:border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-300 px-2.5 py-1 rounded border text-[10px] font-bold font-mono tracking-tight cursor-default select-none">
-              VISA
-            </div>
-            <div className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/10 hover:border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-300 px-2.5 py-1 rounded border text-[10px] font-bold font-mono tracking-tight cursor-default select-none">
-              MC
-            </div>
-            <div className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/10 hover:border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-300 px-2.5 py-1 rounded border text-[10px] font-bold font-mono tracking-tight cursor-default select-none">
-              PAYPAL
-            </div>
-            <div className="bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800/10 hover:border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-300 px-2.5 py-1 rounded border text-[10px] font-bold font-mono tracking-tight cursor-default select-none">
-              APPLE PAY
+            <div className="flex gap-2 text-[10px]">
+              <span className="px-2 py-1 rounded border border-border bg-surface text-text-secondary font-mono font-semibold">VISA</span>
+              <span className="px-2 py-1 rounded border border-border bg-surface text-text-secondary font-mono font-semibold">MC</span>
+              <span className="px-2 py-1 rounded border border-border bg-surface text-text-secondary font-mono font-semibold">PAYPAL</span>
             </div>
           </div>
         </div>

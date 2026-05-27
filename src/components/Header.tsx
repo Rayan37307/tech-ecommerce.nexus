@@ -58,15 +58,15 @@ export default function Header({
   return (
     <>
       {/* Top Banner Message */}
-      <div className="w-full bg-slate-950 text-slate-300 text-xs py-2 px-4 transition-all border-b border-slate-800 flex justify-between items-center z-50">
+      <div className="w-full bg-surface-alt text-text-secondary text-xs py-2 px-4 transition-all border-b border-border flex justify-between items-center z-50">
         <div className="flex items-center gap-2">
-          <span className="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[10px] px-2 py-0.5 rounded-full font-mono uppercase tracking-wider animate-pulse">
+          <span className="bg-pink-50 text-primary border border-pink-200 text-[10px] px-2 py-0.5 rounded-full font-mono uppercase tracking-wider">
             PROMO
           </span>
-          <span className="font-medium">Free shipping on premium gadgets above $100!</span>
+          <span className="font-medium">Free shipping on orders above $100</span>
         </div>
-        <div className="hidden md:flex items-center gap-4 text-[11px] text-slate-400">
-          <span className="hover:text-cyan-400 cursor-pointer transition-colors" onClick={() => setView('faq')}>Support Chat Offline</span>
+        <div className="hidden md:flex items-center gap-4 text-[11px] text-text-tertiary">
+          <span className="hover:text-primary cursor-pointer transition-colors" onClick={() => setView('faq')}>Help</span>
           <span>•</span>
           <span>EST. 2026</span>
         </div>
@@ -74,14 +74,8 @@ export default function Header({
 
       {/* Sticky Main Header */}
       <header
-        className={`sticky top-0 w-full z-40 transition-all duration-300 ${
-          isScrolled
-            ? darkMode
-              ? 'glass-panel bg-slate-950/85 shadow-[0_5px_20px_rgba(0,0,0,0.5)] border-b border-slate-800'
-              : 'glass-panel-light bg-white/85 shadow-md border-b border-slate-200'
-            : darkMode
-            ? 'bg-slate-950 border-b border-slate-900'
-            : 'bg-slate-50 border-b border-slate-200'
+        className={`sticky top-0 w-full z-40 transition-all duration-300 bg-surface border-b border-border ${
+          isScrolled ? 'shadow-md' : ''
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
@@ -94,8 +88,8 @@ export default function Header({
             }}
             className="flex items-center gap-2 cursor-pointer group flex-shrink-0"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(59,130,246,0.5)] group-hover:scale-105 transition-transform duration-250">
-              <Laptop className="w-5 h-5 animate-pulse" />
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-surface font-bold text-lg shadow-md group-hover:shadow-lg group-hover:-translate-y-0.5 transition-all duration-250">
+              <Laptop className="w-5 h-5" />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-xl md:text-2xl leading-none tracking-tight text-slate-950 dark:text-white group-hover:text-cyan-400 transition-colors">

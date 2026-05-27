@@ -1,0 +1,15 @@
+{
+  "scan_date": "2026-05-27",
+  "framework": "React 19 + Vite",
+  "css_framework": "Tailwind CSS v4",
+  "fonts": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "source": "Google Fonts"
+  },
+  "motion_library": "motion 12.23.24",
+  "motion_stance": "motion-on",
+  "icons": "lucide-react",
+  "design_md_exists": false,
+  "existing_palette": "warm/gold (replaced)"
+}
